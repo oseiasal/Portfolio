@@ -30,6 +30,15 @@ p {
     margin-bottom: 10px;
 }
 
+.item:hover{
+    background: rgba(166, 190, 184, 0.39);
+}
+
+
+p {
+    color: cadetblue;
+}
+
 /* Telas maiores do que 1024px */
 @media screen and (min-width: 1024px) {
     /* Formatação do texto para telas grandes */
@@ -113,6 +122,26 @@ p {
     }
     .item-2 a {
         align-content: center;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .footer {
+        height: 50px;
+        margin-bottom: 50px;
+    }
+
+    .footer::before {
+        display: block;
+        content: " ";
+        height: 2px;
+        width: 800px;
+        background: green;
+        margin-top: 20px;
     }
 }
 
