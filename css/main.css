@@ -31,9 +31,13 @@ p {
 }
 
 .item:hover{
-    background: rgba(166, 190, 184, 0.39);
+    /* background: rgba(166, 190, 184, 0.39); */
+    box-shadow: 5px 5px 15px black;
 }
 
+.itm:hover h2 {
+    text-shadow: 2px 2px 2px green;
+}
 
 p {
     color: cadetblue;
