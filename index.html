@@ -7,11 +7,15 @@
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+    </script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-7435450626303093",
     enable_page_level_ads: true
   });
+
 </script>
     <title>Portfólio</title>
 </head>
@@ -24,8 +28,8 @@
             </div><!--      NÃO APAGAR POR CAUSA DO INLINE-BLOCK
             --><div class="col-6 inline-block">
             <div class="name">
-                <h1>Oseias Alves</h1>
-                <h4>Front-End Ninja</h4>
+                <h1>Oseias Nascimento</h1>
+                <h4><a href="https://github.com/oseiasal">github profile</a></h4>
             </div>
             </div>
         </header>
@@ -40,41 +44,21 @@
         </section>
                <section class="bottom">
                <div class="row">
-                <h3>Featured Work</h3>
+                <h3>Trabalhos realizados</h3>
                 </div>
         </section>
     <!-- ADD NEW APPS IN THIS CONTAINER-->
-        <section class="row no-margin flex-container">
-        <!--APP 1-->
-        <div class="col-3 item item-1">
-            <figure class="no-margin">
-            <a href="https://oseiasal.github.io/memory-game/"><img src="img/images.jpg" alt="Um jogo da memória" class="row"></a>
-            </figure>
-            <div class="no-margin">
-                <h2>Memory Game</h2>
-                <p>Memory Game at github</p>
-            </div>
+    <section id="projects" class="row no-margin flex-container" ng-app="app" ng-controller="ctrl">
+
+    <div class="col-3 item item-1" ng-repeat="x in portfolio">
+        <figure class="no-margin">
+        <a href="{{x.link}}"><img src="{{x.img}}" alt="{{x.alt}}" class="row"></a>
+        </figure>
+        <div class="no-margin">
+            <h2>{{x.title}}</h2>
+            <p>{{x.text}}</p>
         </div>
-        <!--APP 2-->
-        <div class="col-3 item item-2">
-            <figure class="no-margin">
-                <img src="img/garlic.jpg" alt="Uma imagem de um alho" title="Em breve, novo projeto" class="row">
-            </figure>
-            <div class="no-margin">
-                <h2>Garlic</h2>
-                <p><a href="#">Garlic github</a></p>
-            </div>
-        </div>
-        <!--APP 3-->
-        <div class="col-3 item item-3">
-            <figure class="no-margin">
-                <img src="img/potato.jpg" alt="Uma imagem de uma batata" title="Em breve, novo projeto" class="row">
-            </figure>
-            <div class="no-margin">
-                <h2>Potato</h2>
-                <p><a href="#">Potato github</a></p>
-            </div>
-        </div>
+    </div>
         </section>
     </div>
 <section class="footer-container">
